@@ -4,6 +4,18 @@ class Factorial {
   int generate(int number) {
     return number == 1 ? 1 : number * generate(number - 1);
   }
+
+
+
+
+
+
+
+
+
+//  int generate(int number) {
+//    return number == 1 ? 1 : number * generate(number - 1);
+//  }
 }
 
 

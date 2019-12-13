@@ -22,4 +22,33 @@ class PrimeNumberTest {
     assertThat(primeNumbers, contains(2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97));
   }
 
+  @Test
+  void isPrimeNumber1False() {
+    assertThat(primeNumber.isPrime(1), is(false));
+  }
+
+  @Test
+  void isPrimeNumber2True() {
+    assertThat(primeNumber.isPrime(2), is(true));
+  }
+
+  @Test
+  void isPrimeNumber3True() {
+    assertThat(primeNumber.isPrime(3), is(true));
+  }
+
+  @Test
+  void isPrimeNumber4False() {
+    assertThat(primeNumber.isPrime(4), is(false));
+  }
+
+  @Test
+  void isPrimeNumber90False() {
+    assertThat(primeNumber.isPrime(90), is(false));
+  }
+
+  @Test
+  void isPrimeNumber97True() {
+    assertThat(primeNumber.isPrime(97), is(true));
+  }
 }

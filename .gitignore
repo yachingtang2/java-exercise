@@ -2,5 +2,7 @@ build
 *.iml
 *.ipr
 *.iws
+gradle/
+out/
 target/
 .gradle

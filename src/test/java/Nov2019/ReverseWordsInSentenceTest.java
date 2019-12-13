@@ -28,8 +28,8 @@ class ReverseWordsInSentenceTest {
 
   @Test
   void reverseThreeWordsSentence() {
-    String reversedSentence = reverseWordsInSentence.reverse("Hello Big World");
-    assertThat(reversedSentence, is("World Big Hello"));
+    String reversedSentence = reverseWordsInSentence.reverse("Hello, Big World!");
+    assertThat(reversedSentence, is("World! Big Hello,"));
   }
 
   @Test

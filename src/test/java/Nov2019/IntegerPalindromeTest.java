@@ -45,7 +45,7 @@ class IntegerPalindromeTest {
 
   @Test
   void integerPalindrome33333True() {
-    boolean result = integerPalindrome.isPalindrome(3333);
+    boolean result = integerPalindrome.isPalindrome(33333);
     assertThat(result, is(true));
   }
 

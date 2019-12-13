@@ -11,7 +11,11 @@ class Employee implements Comparable<Employee> {
   }
 
   int getId() {
-    return id;
+    return this.id;
+  }
+
+  String getFirstName() {
+    return this.firstName;
   }
 
   @Override
@@ -34,6 +38,7 @@ class Employee implements Comparable<Employee> {
 
   @Override
   public int compareTo(Employee employee) {
-    return this.getId() - employee.getId();
+//    Employee e = new Employee(3, "Testing");
+    return employee.getId() - this.getId();
   }
 }

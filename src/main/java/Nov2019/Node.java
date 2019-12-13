@@ -1,12 +1,12 @@
 package Nov2019;
 
 class Node {
-  public int value;
+  char value;
 
   Node left;
   Node right;
 
-  Node(int value) {
+  Node(char value) {
     this.value = value;
   }
 }

@@ -17,7 +17,7 @@ class RemoveDuplicateInArrayTest {
   @Test
   void noDuplicate() {
     int[] array = {1,2,3,4,5};
-    int[] filteredArray = removeDuplicateInArray.filter(array);
+    Object[] filteredArray = removeDuplicateInArray.filter(array);
     assertThat(filteredArray, is(array));
   }
 
@@ -25,7 +25,7 @@ class RemoveDuplicateInArrayTest {
   void remove1Duplicate() {
     int[] array = {1,2,1,3};
     int[] expectedArray = {1,2,3};
-    int[] filteredArray = removeDuplicateInArray.filter(array);
+    Object[] filteredArray = removeDuplicateInArray.filter(array);
     assertThat(filteredArray, is(expectedArray));
   }
 
@@ -33,7 +33,7 @@ class RemoveDuplicateInArrayTest {
   void remove4Duplicates() {
     int[] array = {1,1,1,1,1};
     int[] expectedArray = {1};
-    int[] filteredArray = removeDuplicateInArray.filter(array);
+    Object[] filteredArray = removeDuplicateInArray.filter(array);
     assertThat(filteredArray, is(expectedArray));
   }
 
@@ -41,7 +41,7 @@ class RemoveDuplicateInArrayTest {
   void remove2Duplicates() {
     int[] array = {1,5,5,1};
     int[] expectedArray = {1,5};
-    int[] filteredArray = removeDuplicateInArray.filter(array);
+    Object[] filteredArray = removeDuplicateInArray.filter(array);
     assertThat(filteredArray, is(expectedArray));
   }
 }

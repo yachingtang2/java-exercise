@@ -14,6 +14,18 @@ class PalindromeTest {
   }
 
   @Test
+  void palindromeNullFalse() {
+    boolean result = palindrome.isPalindrome(null);
+    assertThat(result, is(false));
+  }
+
+  @Test
+  void palindromeAFalse() {
+    boolean result = palindrome.isPalindrome("A");
+    assertThat(result, is(false));
+  }
+
+  @Test
   void palindromeHiFalse() {
     boolean result = palindrome.isPalindrome("Hi");
     assertThat(result, is(false));
@@ -28,6 +40,12 @@ class PalindromeTest {
   @Test
   void palindromeSentenceTrue() {
     boolean result = palindrome.isPalindrome("Murder for a jar of red rum");
+    assertThat(result, is(true));
+  }
+
+  @Test
+  void palindromeSentenceWithSymbolsTrue() {
+    boolean result = palindrome.isPalindrome("Murder, for a jar of red rum!");
     assertThat(result, is(true));
   }
 }
