@@ -21,31 +21,71 @@ class FibonacciTest {
 
   @Test
   void recursive2() {
-    assertThat(fibonacci.generate(2), is(1));
+    assertThat(fibonacci.generate(2), is(2));
   }
 
   @Test
   void recursive3() {
-    assertThat(fibonacci.generate(3), is(2));
+    assertThat(fibonacci.generate(3), is(3));
   }
 
   @Test
   void recursive4() {
-    assertThat(fibonacci.generate(3), is(2));
+    assertThat(fibonacci.generate(4), is(5));
   }
 
   @Test
   void recursive5() {
-    assertThat(fibonacci.generate(5), is(5));
+    assertThat(fibonacci.generate(5), is(8));
   }
 
   @Test
   void recursive6() {
-    assertThat(fibonacci.generate(6), is(8));
+    assertThat(fibonacci.generate(6), is(13));
   }
 
   @Test
   void recursive7() {
-    assertThat(fibonacci.generate(7), is(13));
+    assertThat(fibonacci.generate(7), is(21));
+  }
+
+  @Test
+  void isFibonacci1() {
+    assertThat(fibonacci.isFibonacci(1), is(true));
+  }
+
+  @Test
+  void isFibonacci2() {
+    assertThat(fibonacci.isFibonacci(2), is(true));
+  }
+
+  @Test
+  void isFibonacci3() {
+    assertThat(fibonacci.isFibonacci(3), is(true));
+  }
+
+  @Test
+  void isFibonacci5() {
+    assertThat(fibonacci.isFibonacci(5), is(true));
+  }
+
+  @Test
+  void isFibonacci8() {
+    assertThat(fibonacci.isFibonacci(8), is(true));
+  }
+
+  @Test
+  void isFibonacci13() {
+    assertThat(fibonacci.isFibonacci(13), is(true));
+  }
+
+  @Test
+  void isFibonacci4() {
+    assertThat(fibonacci.isFibonacci(4), is(false));
+  }
+
+  @Test
+  void isFibonacci1234893() {
+    assertThat(fibonacci.isFibonacci(1234893), is(false));
   }
 }

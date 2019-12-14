@@ -5,17 +5,48 @@ import java.util.List;
 
 class ArmstrongNumber {
   boolean isArmstrongNumber(int number) {
-    int numberCopy = number;
-    int remainder;
-    int sumOfCubeOfDigits = 0;
+    int remainder = 0;
+    int remainingNumber = number;
+    int sum = 0;
+    int reversedNumber = 0;
 
-    while(numberCopy != 0) {
-      remainder = numberCopy % 10;
-      sumOfCubeOfDigits += remainder * remainder * remainder;
-      numberCopy /= 10;
+    while(remainingNumber > 0) {
+      remainder = remainingNumber % 10;
+      reversedNumber = reversedNumber * 10 + remainder;
+      sum += remainder * remainder * remainder;
+      remainingNumber = remainingNumber / 10;
     }
+    return sum == number;
 
-    return number == sumOfCubeOfDigits;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    int numberCopy = number;
+//    int remainder;
+//    int sumOfCubeOfDigits = 0;
+//
+//    while(numberCopy != 0) {
+//      remainder = numberCopy % 10;
+//      sumOfCubeOfDigits += remainder * remainder * remainder;
+//      numberCopy /= 10;
+//    }
+//
+//    return number == sumOfCubeOfDigits;
   }
 
   List<Integer> findArmstrongNumber(int number) {

@@ -1,33 +1,63 @@
 package Nov2019;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 class FindDuplicateInArray {
-  List<Integer> find(int[] array) {
-    var duplicates = new ArrayList<Integer>();
-    var integerMap = new HashMap<Integer, Integer>();
+  Set<Integer> find(int[] array) {
+    Map<Integer, Integer> integerMap = new LinkedHashMap<>();
+    Set<Integer> duplicates = new LinkedHashSet<>();
 
-    System.out.println("YCT - set 1 = " + integerMap);
-
-    for (int number : array) {
-      var occurrence = integerMap.get(number);
-      if(occurrence == null) {
-        integerMap.put(number, 1);
+    for(int number : array) {
+      int count = integerMap.get(number) == null ? 0 : integerMap.get(number);
+      if(count == 0 ) {
+        integerMap.put(number, ++count);
       } else {
-        integerMap.put(number, ++occurrence);
+        duplicates.add(number);
       }
     }
-
-    for(int key : integerMap.keySet()) {
-      if(integerMap.get(key) > 1) {
-        duplicates.add(key);
-      }
-    }
-    System.out.println("YCT - set 2 = " + integerMap);
-    System.out.println("YCT - value = " + integerMap.entrySet());
 
     return duplicates;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    var duplicates = new ArrayList<Integer>();
+//    var integerMap = new HashMap<Integer, Integer>();
+//
+//    System.out.println("YCT - set 1 = " + integerMap);
+//
+//    for (int number : array) {
+//      var occurrence = integerMap.get(number);
+//      if(occurrence == null) {
+//        integerMap.put(number, 1);
+//      } else {
+//        integerMap.put(number, ++occurrence);
+//      }
+//    }
+//
+//    for(int key : integerMap.keySet()) {
+//      if(integerMap.get(key) > 1) {
+//        duplicates.add(key);
+//      }
+//    }
+//    System.out.println("YCT - set 2 = " + integerMap);
+//    System.out.println("YCT - value = " + integerMap.entrySet());
+//
+//    return duplicates;
 
 
 

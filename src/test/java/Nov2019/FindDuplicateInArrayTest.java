@@ -61,6 +61,6 @@ class FindDuplicateInArrayTest {
   void duplicate42() {
     int[] array = {4, 2, 4, 5, 2, 3, 1};
     var duplicates = findDuplicateInArray.find(array);
-    assertThat(duplicates, contains(2, 4));
+    assertThat(duplicates, contains(4, 2));
   }
 }

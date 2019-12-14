@@ -42,15 +42,15 @@ class ArmstrongNumberTest {
     assertThat(result, is(true));
   }
 
-  @Test
-  void findArmstrongNumberFrom0To1000() {
-    List<Integer> numbers = armstrongNumber.findArmstrongNumber(1000);
-    assertThat(numbers, contains(0,1,153,370,371,407));
-  }
-
-  @Test
-  void findArmstrongNumberFrom0To10000() {
-    List<Integer> numbers = armstrongNumber.findArmstrongNumber(10000);
-    assertThat(numbers, contains(0,1,153,370,371,407));
-  }
+//  @Test
+//  void findArmstrongNumberFrom0To1000() {
+//    List<Integer> numbers = armstrongNumber.findArmstrongNumber(1000);
+//    assertThat(numbers, contains(0,1,153,370,371,407));
+//  }
+//
+//  @Test
+//  void findArmstrongNumberFrom0To10000() {
+//    List<Integer> numbers = armstrongNumber.findArmstrongNumber(10000);
+//    assertThat(numbers, contains(0,1,153,370,371,407));
+//  }
 }

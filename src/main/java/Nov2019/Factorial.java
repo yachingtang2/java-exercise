@@ -1,8 +1,40 @@
 package Nov2019;
 
 class Factorial {
+
   int generate(int number) {
-    return number == 1 ? 1 : number * generate(number - 1);
+    if(number == 1) {
+      return number;
+    }
+    return number * generate(number - 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    return number == 1 ? 1 : number * generate(number - 1);
   }
 
 

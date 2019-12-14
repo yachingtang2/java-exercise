@@ -31,4 +31,28 @@ class BinarySearchTest {
     int[] numbers = {2,3,4};
     assertThat(binarySearch.find(numbers, 4), is(true));
   }
+
+  @Test
+  void numberFound5False() {
+    int[] numbers = {2,3,4};
+    assertThat(binarySearch.find(numbers, 5), is(false));
+  }
+
+  @Test
+  void numberFound8False() {
+    int[] numbers = {9, 7, 2, 3, 4, 6};
+    assertThat(binarySearch.find(numbers, 8), is(false));
+  }
+
+  @Test
+  void numberFound8True() {
+    int[] numbers = {9, 7, 2, 3, 4, 8};
+    assertThat(binarySearch.find(numbers, 8), is(true));
+  }
+
+  @Test
+  void numberFound3True() {
+    int[] numbers = {9, 7, 2, 3, 4, 8};
+    assertThat(binarySearch.find(numbers, 3), is(true));
+  }
 }

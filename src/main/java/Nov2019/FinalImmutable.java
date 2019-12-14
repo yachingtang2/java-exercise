@@ -26,7 +26,7 @@ class FinalImmutable {
 
     String s2 = "Tang";
     s2 = "Ya-Ching";
-    System.out.println(s1);
+    System.out.println(s2);
 
     String s3 = "AA";
     s3 = "aa";

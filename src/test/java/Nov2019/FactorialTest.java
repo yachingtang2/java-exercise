@@ -38,4 +38,14 @@ class FactorialTest {
   void factorial5() {
     assertThat(factorial.generate(5), is(120));
   }
+
+  @Test
+  void factorial6() {
+    assertThat(factorial.generate(6), is(720));
+  }
+
+  @Test
+  void factorial7() {
+    assertThat(factorial.generate(7), is(5040));
+  }
 }
