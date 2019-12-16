@@ -1,9 +1,10 @@
 package Nov2019;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-class FinalImmutable {
+class FinalImmutable implements Serializable {
   String modifyString() {
     final String string1 = "String 1";
 //    string1 = "string 2";
@@ -33,6 +34,7 @@ class FinalImmutable {
 
     final List<Integer> integerList = new ArrayList<>();
     integerList.add(123);
+    integerList.add(321);
 //    integerList = List.of(1,2,3);
 
     final int value = 123;
@@ -45,8 +47,33 @@ class FinalImmutable {
     System.out.println("Integer List = " + integerList.toString());
     System.out.println("Int List = " + intList.toString());
 
+//    try {
+//      File file = new File("abc.txt");
+//      InputStreamReader reader = new InputStreamReader(new FileInputStream(file));
+//    } finally {
+//      throw new Exception();
+//    }
     return string1;
   }
+
+  public static String foo(){
+    System.out.println("Test foo called");
+    return "";
+  }
+
+  public static void main(String args[]){
+    FinalImmutable obj = null;
+    System.out.println(obj.foo());
+  }
+
+//  public static String toString(){
+//    System.out.println("Test toString called");
+//    return "";
+//  }
+//
+//  public static void main(String args[]){
+//    System.out.println(toString());
+//  }
 
   final int modifyInteger() {
     return 0;
