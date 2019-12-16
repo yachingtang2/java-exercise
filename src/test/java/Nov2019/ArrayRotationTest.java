@@ -13,46 +13,46 @@ class ArrayRotationTest {
   @Test
   void rotate0() {
     int[] expectedArray = {1,2,3};
-    assertThat(arrayRotation.rotate(array, 0), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 0), is(expectedArray));
   }
 
   @Test
   void rotate3() {
     int[] expectedArray = {1,2,3};
-    assertThat(arrayRotation.rotate(array, 0), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 3), is(expectedArray));
   }
 
   @Test
   void rotate1() {
     int[] expectedArray = {2,3,1};
-    assertThat(arrayRotation.rotate(array, 1), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 1), is(expectedArray));
   }
 
   @Test
   void rotate2() {
     int[] expectedArray = {3,1,2};
-    assertThat(arrayRotation.rotate(array, 2), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 2), is(expectedArray));
   }
 
   @Test
   void rotate3in5() {
     int[] array = {1,2,3,4,5};
     int[] expectedArray = {4,5,1,2,3};
-    assertThat(arrayRotation.rotate(array, 3), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 3), is(expectedArray));
   }
 
   @Test
   void rotate4in5() {
     int[] array = {1,2,3,4,5};
     int[] expectedArray = {5,1,2,3,4};
-    assertThat(arrayRotation.rotate(array, 4), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 4), is(expectedArray));
   }
 
   @Test
   void rotate5in5() {
     int[] array = {1,2,3,4,5};
     int[] expectedArray = {1,2,3,4,5};
-    assertThat(arrayRotation.rotate(array, 5), is(expectedArray));
+    assertThat(arrayRotation.rotateLeft(array, 5), is(expectedArray));
   }
 
 //  @Test

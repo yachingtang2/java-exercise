@@ -1,27 +1,21 @@
 package Nov2019;
 
 class ArrayRotation {
-  int[] rotate(int[] array, int rotation) {
-
-
-
-
-
-    int[] rotatedArray = new int[array.length];
-    int actualRotation = rotation % array.length;
-
-    if(actualRotation == 0) {
+  int[] rotateLeft(int[] array, int rotation) {
+    if(rotation == 0 || rotation % array.length == 0) {
       return array;
     }
 
+    int[] rotatedArray = new int[array.length];
+
     for(int i = 0; i < array.length; i++) {
-      if(actualRotation - i > 0) {
-        rotatedArray[array.length - actualRotation + i] = array[i];
-      }
-      else if(actualRotation - i <= 0) {
-        rotatedArray[i - actualRotation] = array[i];
+      if(i - rotation < 0) {
+        rotatedArray[array.length + i - rotation] = array[i];
+      } else {
+        rotatedArray[i - rotation] = array[i];
       }
     }
+
     return rotatedArray;
 
 
@@ -49,6 +43,27 @@ class ArrayRotation {
 
 
 
+
+
+
+
+
+//    int[] rotatedArray = new int[array.length];
+//    int actualRotation = rotation % array.length;
+//
+//    if(actualRotation == 0) {
+//      return array;
+//    }
+//
+//    for(int i = 0; i < array.length; i++) {
+//      if(actualRotation - i > 0) {
+//        rotatedArray[array.length - actualRotation + i] = array[i];
+//      }
+//      else if(actualRotation - i <= 0) {
+//        rotatedArray[i - actualRotation] = array[i];
+//      }
+//    }
+//    return rotatedArray;
 
 
 //    int[] rotatedArray = new int[array.length];

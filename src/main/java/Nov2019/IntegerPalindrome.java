@@ -2,17 +2,52 @@ package Nov2019;
 
 class IntegerPalindrome {
   public boolean isPalindrome(int number) {
+    int remainder = 0;
+    int digitsLeft = number;
     int reversedNumber = 0;
-    int remainder;
-    int dividend = number;
 
-    while(dividend > 0) {
-      remainder = dividend % 10;
-      reversedNumber = remainder + reversedNumber * 10;
-      dividend = dividend / 10;
+    while(digitsLeft > 0) {
+      remainder = digitsLeft % 10;
+      reversedNumber = reversedNumber * 10 + remainder;
+      digitsLeft /= 10;
     }
 
     return reversedNumber == number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    int reversedNumber = 0;
+//    int remainder;
+//    int dividend = number;
+//
+//    while(dividend > 0) {
+//      remainder = dividend % 10;
+//      reversedNumber = remainder + reversedNumber * 10;
+//      dividend = dividend / 10;
+//    }
+//
+//    return reversedNumber == number;
   }
 
 

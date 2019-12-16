@@ -8,21 +8,64 @@ class BinarySearch {
 
     int high = numbers.length - 1;
     int low = 0;
-    int middle;
+    int medium;
 
-    while(low <= high) {
-      middle = (high + low) / 2;
+    while(high >= low) {
+      medium = (high + low) / 2;
 
-      if(numberToFind < numbers[middle]) {
-        high = middle - 1;
-      } else if (numberToFind > numbers[middle]) {
-        low = middle + 1;
-      } else if (numberToFind == numbers[middle]) {
+      if(numberToFind > numbers[medium]) {
+        low = medium + 1;
+      } else if (numberToFind < numbers[medium]) {
+        high = medium - 1;
+      } else if (numberToFind == numbers[medium]) {
         return true;
       }
     }
 
     return false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    Arrays.sort(numbers);
+//
+//    int high = numbers.length - 1;
+//    int low = 0;
+//    int middle;
+//
+//    while(low <= high) {
+//      middle = (high + low) / 2;
+//
+//      if(numberToFind < numbers[middle]) {
+//        high = middle - 1;
+//      } else if (numberToFind > numbers[middle]) {
+//        low = middle + 1;
+//      } else if (numberToFind == numbers[middle]) {
+//        return true;
+//      }
+//    }
+//
+//    return false;
 
 
 
