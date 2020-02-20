@@ -1,8 +1,8 @@
 package Nov2019;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Stream;
 
 class FinalImmutable implements Serializable {
   String modifyString() {
@@ -37,6 +37,8 @@ class FinalImmutable implements Serializable {
     integerList.add(321);
 //    integerList = List.of(1,2,3);
 
+//    integerList = new ArrayList<>();
+
     final int value = 123;
 //    value = 125;
 
@@ -61,9 +63,27 @@ class FinalImmutable implements Serializable {
     return "";
   }
 
-  public static void main(String args[]){
-    FinalImmutable obj = null;
-    System.out.println(obj.foo());
+  public static void main(String... args){
+    FinalImmutable obj = new FinalImmutable();
+    System.out.println(FinalImmutable.foo());
+
+    int[] numbers = {5,4,3,2,1};
+
+    OptionalInt sum = Arrays.stream(numbers).reduce(Integer::sum);
+
+    System.out.println("sum = " + sum.getAsInt());
+
+    Stream<Integer> abc = Stream.of(1, 2, 3).peek(System.out::println);
+
+    long count = Stream.of(1, 2, 3).peek(System.out::println).count();
+
+    long count2 = Stream.of(3,1,2).peek(System.out::println).min(Comparator.naturalOrder()).orElseGet(() -> 0);
+
+    List<Integer> integerList = List.of(1,2,3);
+    List<Integer> myIntegers = new ArrayList<>(integerList);
+    System.out.println(myIntegers);
+
+    obj.modifyString();
   }
 
 //  public static String toString(){
