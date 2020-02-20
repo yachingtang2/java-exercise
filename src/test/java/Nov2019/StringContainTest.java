@@ -19,7 +19,7 @@ public class StringContainTest {
     String[] array1 = { "ab" };
     String[] array2 = { "nbc" };
 
-    Object[] strings = stringContain.contains(array1, array2);
+    String[] strings = stringContain.contains(array1, array2);
 
     assertThat(strings.length).isEqualTo(0);
   }
@@ -29,7 +29,7 @@ public class StringContainTest {
     String[] array1 = { "ab" };
     String[] array2 = { "abc" };
 
-    Object[] strings = stringContain.contains(array1, array2);
+    String[] strings = stringContain.contains(array1, array2);
 
     assertThat(strings.length).isEqualTo(1);
     assertThat(strings).containsExactly("abc");
@@ -40,7 +40,7 @@ public class StringContainTest {
     String[] array1 = { "ab" };
     String[] array2 = { "abc", "aab" };
 
-    Object[] strings = stringContain.contains(array1, array2);
+    String[] strings = stringContain.contains(array1, array2);
 
     assertThat(strings.length).isEqualTo(2);
     assertThat(strings).containsExactly("aab", "abc");
@@ -51,7 +51,7 @@ public class StringContainTest {
     String[] array1 = { "ab" };
     String[] array2 = { "abc", "aab", "abc" };
 
-    Object[] strings = stringContain.contains(array1, array2);
+    String[] strings = stringContain.contains(array1, array2);
 
     assertThat(strings.length).isEqualTo(2);
     assertThat(strings).containsExactly("aab", "abc");
@@ -62,7 +62,7 @@ public class StringContainTest {
     String[] array1 = { "bc", "ab", "ac" };
     String[] array2 = { "nbc", "abc", "cbs", "aab" };
 
-    Object[] strings = stringContain.contains(array1, array2);
+    String[] strings = stringContain.contains(array1, array2);
 
     assertThat(strings.length).isEqualTo(3);
     assertThat(strings).containsExactly("aab", "abc", "nbc");
