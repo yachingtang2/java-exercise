@@ -1,9 +1,18 @@
 package Nov2019;
 
+import java.util.Comparator;
+
 import static java.util.Arrays.stream;
+import static java.util.Comparator.comparing;
 
 public class CountNines {
   public int count(int[] sequence) {
+
+    Comparator<String> test = comparing(String::length);
+
+    System.out.println("1 - YCT = " + test.compare("a", "de"));
+    System.out.println("2 - YCT = " + test.compare("ab", "de"));
+    System.out.println("3 - YCT = " + test.compare("abc", "de"));
 
     return stream(sequence)
         .filter(value -> String.valueOf(value).contains("9"))
